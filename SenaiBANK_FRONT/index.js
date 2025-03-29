@@ -10,9 +10,8 @@ function tentarAutorizar()
     let url = "http://localhost:5000/users/authorize";
 
     let request = {
-        method: "POST",
-        headers: {"content-type":"application/json"},
-        body: JSON.stringify({jwt_token:token})
+        method: "GET",
+        Headers: {"Authorization":token}
     };
 
     fetch(url,request).then(response => response.json()).then(data=>{
@@ -33,4 +32,11 @@ function tentarAutorizar()
         localStorage.removeItem("jwt_token");
         window.location.href = "login.html";
     });
+}
+
+function logout()
+{
+    localStorage.removeItem("jwt_token");
+    window.location.href = "login.html";
+    return;
 }

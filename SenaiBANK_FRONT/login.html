@@ -5,30 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="login.js"></script>
     <title>Document</title>  
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="card">
+        <strong><span class="card__title">Login</span></strong>
     <div>
-        <h1>Login</h1>
         <form>
-            <label for="Usuário">Nome de Usuário:</label>
+            
             <br><br>
-        <input type="text" id="Usuário" 
-               name="Usuário" 
-               placeholder="" required>
+        <!-- From Uiverse.io by Praashoo7 --> 
+<input type="text" autocomplete="off" name="text" class="input" placeholder="Usuário"> 
         <br><br>
         </form>
         <p id="userName"></p>
         <p id="password"></p>
 
-        <form>
-            <label for="Senha">Senha:</label>
-            <br><br>
-        <input type="text" id="Senha" 
-               name="Senha" 
-               placeholder="" required>        
+        <form>            <br><br>
+            <input type="text" autocomplete="off" name="text" class="input" placeholder="Senha">        
         <br><br>
+        <a href="dashboard.html">
         <button onclick="tryToLogin()">Login</button>
+        </a>
         </form>
     </div>
+
 </body>
 </html>
